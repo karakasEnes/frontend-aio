@@ -1,0 +1,17 @@
+{
+  "name": "creative-design",
+  "version": "1.0.0",
+  "description": "HTML CSS JS",
+  "main": "index.js",
+  "scripts": {
+    "sass-w": "npx sass --watch src/scss:dist"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "Enes Karakaş",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

@@ -1,0 +1,145 @@
+@use './variables';
+@use './mixins';
+
+.section-3 {
+  @include mixins.center;
+  width: 100%;
+  height: 100%;
+  background-color: variables.$black-color;
+  flex-direction: column;
+  padding: 15rem 0;
+  clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+
+  .section-3-heading {
+    font-size: 10rem;
+    font-weight: 200;
+    color: variables.$primary-color;
+    margin-bottom: 15rem;
+  }
+
+  .section-3-content {
+    @include mixins.center;
+    width: 80%;
+    flex-direction: column;
+    perspective: 1000rem;
+    position: relative;
+
+    img {
+      width: inherit;
+    }
+
+    .macbook-img-1 {
+      transform: rotateX(-80deg);
+      transform-origin: bottom;
+    }
+
+    &.change .macbook-img-1 {
+      transform: rotateX(0);
+      transition: transform 3s;
+    }
+
+    .loading-wrapper {
+      position: absolute;
+      top: 6%;
+      width: 60%;
+      height: 85%;
+      background: linear-gradient(
+          rgba(255, 255, 255, 0.6),
+          rgba(255, 255, 255, 0.6)
+        ),
+        url('../src/images/MacBook/macbook-1-desktop.png') center no-repeat;
+
+      z-index: -1;
+      opacity: 0;
+
+      .loading {
+        // display: none;
+        @include mixins.center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: variables.$black-color;
+        flex-direction: column;
+
+        i {
+          font-size: 10rem;
+          color: variables.$white-color;
+          margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+          width: 22rem;
+          height: 0.3rem;
+          background-color: #888;
+          border-radius: 5rem;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: variables.$white-color;
+          }
+        }
+      }
+    }
+
+    .macbook-info {
+      position: absolute;
+      width: 70rem;
+      text-align: center;
+      opacity: 0;
+
+      .macbook-info-heading {
+        font-size: 6rem;
+        font-weight: 400;
+        color: variables.$primary-color;
+      }
+
+      .macbook-price {
+        font-size: 2.5rem;
+        font-weight: 200;
+        margin: 3rem 0;
+      }
+
+      .macbook-btn {
+        width: 25rem;
+        height: 5rem;
+        background-image: linear-gradient(#ddd, #fff);
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0.1rem 0.1rem 0.1rem #fff, -0.1rem -0.1rem 0.1rem #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        color: variables.$primary-color;
+        cursor: pointer;
+      }
+    }
+
+    &.change .loading-wrapper {
+      opacity: 1;
+      transition: opacity 1s 2s;
+    }
+
+    &.change .loading .progress-bar::after {
+      width: 100%;
+      transition: width 1s 3s;
+    }
+
+    &.change .loading {
+      opacity: 0;
+      transition: 1s 5s;
+    }
+
+    &.change .macbook-info {
+      opacity: 1;
+      transition: opacity 1s 6s;
+    }
+  }
+}

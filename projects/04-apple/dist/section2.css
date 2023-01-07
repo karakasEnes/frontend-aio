@@ -1,0 +1,90 @@
+.section-2 {
+  width: 100%;
+  height: 120vh;
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-2 .section-2-heading {
+  font-size: 10rem;
+  font-weight: 200;
+  color: #000;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.section-2 .section-2-heading::before {
+  content: "";
+  width: 130%;
+  height: 30vw;
+  background-image: linear-gradient(#6edae6, #fff);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewX(-50deg);
+  transform-origin: left top;
+  z-index: -1;
+  border-radius: 1rem;
+}
+.section-2 .iphones {
+  height: 60vh;
+  width: 50vw;
+  background-image: linear-gradient(#6edae6, #fff);
+  border-radius: 0.5rem;
+}
+.section-2 .iphones:hover .iphone-img-1 {
+  opacity: 0;
+}
+.section-2 .iphones:hover .iphone-img-2 {
+  opacity: 1;
+}
+.section-2 .iphones img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 3s;
+}
+.section-2 .iphones .iphone-img-2 {
+  opacity: 0;
+}
+.section-2 .iphone-btns {
+  display: flex;
+}
+.section-2 .iphone-btns .iphone-btn {
+  width: 6rem;
+  height: 6rem;
+  background-image: linear-gradient(to right, rgb(51, 51, 51) 60%, rgb(82, 82, 82));
+  margin: 0 3rem;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-2 .iphone-btns .iphone-btn::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  display: block;
+  border: 0.1rem solid #6edae6;
+  border-radius: 1rem;
+}
+.section-2 .iphone-btns .iphone-btn span {
+  position: absolute;
+  top: -3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #6edae6;
+  width: max-content;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+.section-2 .iphone-btns .iphone-btn:hover span {
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=section2.css.map */

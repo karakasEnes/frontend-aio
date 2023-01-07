@@ -1,0 +1,22 @@
+.section-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+.section-6 .section-6-icons .icon-link {
+  margin: 0 5rem;
+}
+.section-6 .section-6-icons .icon-link img {
+  width: 10rem;
+}
+.section-6 .copyright {
+  position: absolute;
+  bottom: 5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/*# sourceMappingURL=section6.css.map */

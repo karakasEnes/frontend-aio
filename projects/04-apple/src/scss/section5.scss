@@ -1,0 +1,60 @@
+@use './variables';
+@use './mixins';
+
+.section-5 {
+  @include mixins.center;
+  width: 100%;
+  height: 100vh;
+
+  .airpods {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: relative;
+
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .airpods-img-2 {
+      background-color: variables.$primary-color;
+    }
+
+    .section-5-heading {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15rem;
+      font-weight: 300;
+      color: variables.$white-color;
+      text-shadow: 0.1rem 0.1rem 0 #999;
+    }
+
+    .airpods-buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 5rem;
+
+      .airpods-btn {
+        width: 15rem;
+        height: 4rem;
+        background-color: variables.$primary-color;
+        margin: 0 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        color: variables.$white-color;
+        cursor: pointer;
+      }
+
+      .airpods-btn:last-child {
+        background-color: variables.$white-color;
+        color: variables.$primary-color;
+      }
+    }
+  }
+}

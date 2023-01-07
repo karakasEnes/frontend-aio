@@ -1,0 +1,14 @@
+{
+  "name": "apple-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-w": "npx sass --watch src/scss:dist"
+  },
+  "author": "Enes Karakaş",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

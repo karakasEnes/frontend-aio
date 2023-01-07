@@ -1,0 +1,54 @@
+.section-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.section-5 .airpods {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  position: relative;
+}
+.section-5 .airpods img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+.section-5 .airpods .airpods-img-2 {
+  background-color: #6edae6;
+}
+.section-5 .airpods .section-5-heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15rem;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0.1rem 0.1rem 0 #999;
+}
+.section-5 .airpods .airpods-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5rem;
+}
+.section-5 .airpods .airpods-buttons .airpods-btn {
+  width: 15rem;
+  height: 4rem;
+  background-color: #6edae6;
+  margin: 0 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.section-5 .airpods .airpods-buttons .airpods-btn:last-child {
+  background-color: #fff;
+  color: #6edae6;
+}
+
+/*# sourceMappingURL=section5.css.map */
